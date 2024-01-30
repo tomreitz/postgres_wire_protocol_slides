@@ -23,7 +23,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-1.png)
+![database](media/db/what-is-database-1.svg)
 
 Note:
 well it stores data, so it must have some storage...
@@ -35,7 +35,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-2.png)
+![database](media/db/what-is-database-2.svg)
 
 Note:
 you have to authenticate first, so it must handle that...
@@ -47,7 +47,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-3.png)
+![database](media/db/what-is-database-3.svg)
 
 Note:
 something **executes** your query...
@@ -59,7 +59,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-4.png)
+![database](media/db/what-is-database-4.svg)
 
 Note:
 what exactly? well there are actually a few pieces...
@@ -71,7 +71,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-5.png)
+![database](media/db/what-is-database-5.svg)
 
 Note:
 * First, there's some interface that "listens" for database connections and queries
@@ -86,7 +86,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-6.png)
+![database](media/db/what-is-database-6.svg)
 
 Note:
 how the data is stored; row-oriented vs. columnar, sharding, caching, indexing, and more
@@ -100,7 +100,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-7.png)
+![database](media/db/what-is-database-7.svg)
 
 Note:
 how the query plan is developed; relational algebra, pushing down projections, using indexes...
@@ -114,7 +114,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-8.png)
+![database](media/db/what-is-database-8.svg)
 
 Note:
 the interface, and specifically...
@@ -126,7 +126,7 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-postgres.png)
+![database](media/db/what-is-database-postgres.svg)
 
 Note:
 the interface on Postgres. And...
@@ -138,14 +138,18 @@ What <u><em>is</em></u> a database? &nbsp; What does it <u><em>do</em></u>?<br /
 SELECT * FROM ... WHERE ...
 ```
 
-![database](media/db/what-is-database-postgres-muppets.png)
+![database](media/db/what-is-database-postgres-muppets.svg)
 
 Note:
-we'll have some muppets help us!
+we'll have some muppets help us! But first:
 
 
 
 [comment]: # (!!! data-auto-animate)
+
+What is <u><em>Postgres</em></u>?
+
+[comment]: # (||| data-auto-animate)
 
 What is <u><em>Postgres</em></u>?
 
@@ -178,82 +182,86 @@ What is <u><em>Postgres</em></u>?
 
 Note:
 * been around for almost four decades, since 1986
-* secure, performance, available in all major cloud platforms
+* secure, performant, and available in all major cloud platforms
 
 
 [comment]: # (!!! data-auto-animate)
 
 What is the <u><em>Postgres Wire Protocol</em></u>?
 
-A message-based protocol for <!-- .element: class="fragment" data-fragment-index="2" -->
+A message-based protocol over TCP/IP for <!-- .element: class="fragment" data-fragment-index="2" -->
 * authenticating <!-- .element: class="fragment" data-fragment-index="3" -->
 * sending queries <!-- .element: class="fragment" data-fragment-index="4" -->
 * receiving results <!-- .element: class="fragment" data-fragment-index="5" -->
 
 with a Postgres server. <!-- .element: class="fragment" data-fragment-index="6" -->
 
-Messages are sent via TCP/IP, and follow a specific format. <!-- .element: class="fragment" data-fragment-index="7" -->
-
 Note:
-* pretty simple, actually!
-* let's explore it using a typical Muppet conversation
-
-[comment]: # (!!! data-auto-animate)
-
-![sms](media/sms/sms-0.png)
+* it's pretty simple, actually!
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-1.png)
+![strong](media/gifs/kermit-phone.gif)
+
+Note:
+* let's explore it as a typical Muppet conversation.. via text!
+
+[comment]: # (!!! data-auto-animate)
+
+![sms](media/sms/sms-0.svg)
+
+[comment]: # (||| data-auto-animate)
+
+![sms](media/sms/sms-1.svg)
 
 <audio data-autoplay src="media/audio/misspiggy-heya.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-2.png)
+![sms](media/sms/sms-2.svg)
 
 <audio data-autoplay src="media/audio/kermit-really.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-3.png)
+![sms](media/sms/sms-3.svg)
 
 <audio data-autoplay src="media/audio/misspiggy-silly-frog.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-4.png)
+![sms](media/sms/sms-4.svg)
 
 <audio data-autoplay src="media/audio/kermit-yes-of-course.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-5.png)
+![sms](media/sms/sms-5.svg)
 
 <audio data-autoplay src="media/audio/kermit-how-can-i-help.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-6.png)
+![sms](media/sms/sms-6.svg)
 
 <audio data-autoplay src="media/audio/misspiggy-do-you-love-me.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-7.png)
+![sms](media/sms/sms-7.svg)
 
 Note:
 * come on, I have to build some suspense!
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-8.png)
+![sms](media/sms/sms-8.svg)
 
 <audio data-autoplay src="media/audio/kermit-no-i-dont.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-9.png)
+![sms](media/sms/sms-9.svg)
 
 <audio data-autoplay src="media/audio/misspiggy-bahh.mp3"></audio>
 
@@ -266,34 +274,44 @@ Note:
 ![angry](media/gifs/misspiggy-angry.gif)
 
 Note:
-* ok, this is funny, but each of these messages is basically a type of message in the Postgres Wire Protocol
+* ok, this is funny, but...
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-9.png)
+![sms](media/sms/sms-9.svg)
+
+Note:
+* each of these messages corresponds to a message type in the Postgres Wire Protocol!
 
 [comment]: # (||| data-auto-animate)
 
-![sms](media/sms/sms-10.png)
+![sms](media/sms/sms-10.svg)
 
 Note:
 * let's walk through and see what each message type looks like
 
 [comment]: # (!!! data-auto-animate)
 
-![startup](media/protocol/protocol-startup.png)
+![startup](media/protocol/protocol-startup.svg)
+
+Note:
+* startup message has keys and values, null-byte delimited
+* all other messages (besides the startup message) follow the same pattern...
 
 [comment]: # (||| data-auto-animate)
 
-![generic](media/protocol/protocol-generic.png)
+![generic](media/protocol/protocol-generic.svg)
+
+Note:
+* a single character indicating the type of message, the length of th 
 
 [comment]: # (||| data-auto-animate)
 
-![auth](media/protocol/protocol-authentication.png)
+![auth](media/protocol/protocol-authentication.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![password](media/protocol/protocol-password.png)
+![password](media/protocol/protocol-password.svg)
 
 <!-- [comment]: # (||| data-auto-animate)
 
@@ -301,31 +319,31 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-![auth ok](media/protocol/protocol-authok.png)
+![auth ok](media/protocol/protocol-authok.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![ready](media/protocol/protocol-ready.png)
+![ready](media/protocol/protocol-ready.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![query](media/protocol/protocol-query.png)
+![query](media/protocol/protocol-query.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![header](media/protocol/protocol-rowdescription.png)
+![header](media/protocol/protocol-rowdescription.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![row](media/protocol/protocol-datarow.png)
+![row](media/protocol/protocol-datarow.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![complete](media/protocol/protocol-complete.png)
+![complete](media/protocol/protocol-complete.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![terminate](media/protocol/protocol-terminate.png)
+![terminate](media/protocol/protocol-terminate.svg)
 
 [comment]: # (!!! data-auto-animate)
 
@@ -356,8 +374,14 @@ let pgServer = (byte) => {
         socket.write(buffers.readyForQuery());
 
       } else if (data.toString().startsWith("Q")) {
-        // a query! process it...
-
+        // a query! process it... and send back result `rows`
+        socket.write(buffers.rowDescription(rowDescription));
+        rows.forEach(row => {
+          // ...
+          socket.write(buffers.dataRow(rowData));
+        });
+        socket.write(buffers.commandComplete("done"));
+        socket.write(buffers.readyForQuery());
       } else if (data.toString().startsWith("X")) ; // do nothing (client is closing the connection)
     });
   });
@@ -371,12 +395,7 @@ let pgServer = (byte) => {
 
 Cool... but <u><em>why</em></u>?
 
-* Intercept queries  <!-- .element: class="fragment" data-fragment-index="2" -->
-* Rewrite queries  <!-- .element: class="fragment" data-fragment-index="3" -->
-* Cache or modify results  <!-- .element: class="fragment" data-fragment-index="4" -->
-
 Note:
-* This is what cube.js does!
 * Let's rejoin the muppets...
 
 [comment]: # (!!! data-auto-animate)
@@ -389,25 +408,29 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-![AI sms](media/ai-sms/ai-sms-7.png)
+![AI sms](media/ai-sms/ai-sms-7.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![AI sms](media/ai-sms/ai-sms-8.png)
+![AI sms](media/ai-sms/ai-sms-8.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![AI sms](media/ai-sms/ai-sms-9.png)
+![AI sms](media/ai-sms/ai-sms-9.svg)
 
 [comment]: # (||| data-auto-animate)
 
-![AI sms](media/ai-sms/ai-sms-10.png)
+![worried](media/gifs/kermit-worried.gif)
+
+[comment]: # (||| data-auto-animate)
+
+![AI sms](media/ai-sms/ai-sms-10.svg)
 
 <audio data-autoplay src="media/audio/kermit-special-place.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
-![AI sms](media/ai-sms/ai-sms-11.png)
+![AI sms](media/ai-sms/ai-sms-11.svg)
 
 <audio data-autoplay src="media/audio/misspiggy-oh-kermie.mp3"></audio>
 
@@ -417,11 +440,18 @@ Note:
 
 [comment]: # (||| data-auto-animate)
 
-![worried](media/gifs/kermit-worried.gif)
-
-[comment]: # (||| data-auto-animate)
-
 ![mean](media/gifs/kermit-mean.gif)
+
+[comment]: # (!!! data-auto-animate)
+
+Implementing the Postgres Wire Protocol allows us to
+* Intercept queries  <!-- .element: class="fragment" data-fragment-index="2" -->
+* Rewrite queries  <!-- .element: class="fragment" data-fragment-index="3" -->
+* Cache or modify results  <!-- .element: class="fragment" data-fragment-index="4" -->
+
+Note:
+* This is what cube.js does!
+* and also bifrost (a tool I've been developing)
 
 [comment]: # (!!! data-auto-animate)
 
@@ -514,11 +544,11 @@ Note:
 
 [comment]: # (!!! data-auto-animate)
 
-![media/dag.png](media/cube-bifrost.png)
+![media/dag.png](media/cube-bifrost-muppets.svg)
 
-<!-- [comment]: # (!!! data-auto-animate)
+[comment]: # (||| data-auto-animate)
 
-(demo) -->
+![media/dag.png](media/cube-bifrost.svg)
 
 [comment]: # (!!! data-auto-animate)
 
