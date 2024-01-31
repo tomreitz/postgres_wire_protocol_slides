@@ -350,6 +350,8 @@ Note:
 Implementing the <u><em>Postgres Wire Protocol</em></u> (Node.js)
 
 ```javascript
+import net from 'net'
+
 let pgServer = (byte) => {
   const server = net.createServer((socket) => {
     socket.on('data', async (data) => {
@@ -382,6 +384,7 @@ let pgServer = (byte) => {
         });
         socket.write(buffers.commandComplete("done"));
         socket.write(buffers.readyForQuery());
+        
       } else if (data.toString().startsWith("X")) ; // do nothing (client is closing the connection)
     });
   });
