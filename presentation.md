@@ -384,7 +384,7 @@ let pgServer = (byte) => {
         });
         socket.write(buffers.commandComplete("done"));
         socket.write(buffers.readyForQuery());
-        
+
       } else if (data.toString().startsWith("X")) ; // do nothing (client is closing the connection)
     });
   });
@@ -425,6 +425,8 @@ Note:
 
 ![worried](media/gifs/kermit-worried.gif)
 
+<audio data-autoplay src="media/audio/warning.mp3"></audio>
+
 [comment]: # (||| data-auto-animate)
 
 ![AI sms](media/ai-sms/ai-sms-10.svg)
@@ -440,6 +442,8 @@ Note:
 [comment]: # (||| data-auto-animate)
 
 ![married](media/gifs/married.gif)
+
+<audio data-autoplay src="media/audio/wedding-march.mp3"></audio>
 
 [comment]: # (||| data-auto-animate)
 
