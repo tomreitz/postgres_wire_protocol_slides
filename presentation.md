@@ -449,6 +449,8 @@ Note:
 
 ![mean](media/gifs/kermit-mean.gif)
 
+<audio data-autoplay src="media/audio/kermit-laugh.mp3"></audio>
+
 [comment]: # (!!! data-auto-animate)
 
 Implementing the Postgres Wire Protocol allows us to
